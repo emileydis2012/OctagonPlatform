@@ -13,13 +13,16 @@
         @Html.AntiForgeryToken()
     
         <div class="form-horizontal">
-            <h4>Login Here</h4>
+        
             <h5>@ViewBag.Msg</h5>
-            <hr />
             @Html.ValidationSummary(true)
 
             <div class="form-group">
-                @Html.LabelFor(model => model.UserName, new { @class = "control-label col-md-2" })
+                <h1 class="text-center" style="font-family: Bitter, serif;">Login</h1>
+                <div class="illustration">
+                    <i class="icon ion-ios-locked-outline"></i>
+                </div>
+                @Html.LabelFor(model => model.UserName, new {@class = "control-label col-md-2"} )
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.UserName)
                     @Html.ValidationMessageFor(model => model.UserName)

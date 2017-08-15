@@ -202,6 +202,7 @@
     <Compile Include="Helpers\ISoftDeleted.cs" />
     <Compile Include="Helpers\MappingProfile.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\AuditEntity.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\GenericRepository.cs" />

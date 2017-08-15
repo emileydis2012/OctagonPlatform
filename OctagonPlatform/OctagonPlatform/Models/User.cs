@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace OctagonPlatform.Models
 {
-    public class User:ISoftDeleted, IAuditEntity, IUser
+    public class User: IAuditEntity, ISoftDeleted
     {
         //Implementation Here
         public int Id { get; set; }

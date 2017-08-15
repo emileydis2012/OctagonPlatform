@@ -38,13 +38,13 @@ namespace OctagonPlatform.Repositories
         public void Add(T obj)
         {
             Table.Add(obj);
-            if (obj is AuditEntity)
+            if (obj is IAuditEntity)
             {
                 var date = DateTime.Now;
                 var user = HttpContext.Current.User;
                 var userid = user.Identity.GetUserId();
-                (obj as AuditEntity).CreatedAt = date;
-                (obj as AuditEntity).CreatedBy= userid;
+                (obj as IAuditEntity).CreatedAt = date;
+                (obj as IAuditEntity).CreatedBy= userid;
 
             }
             Save();
@@ -53,13 +53,13 @@ namespace OctagonPlatform.Repositories
         {
             Table.Attach(obj);
             _context.Entry(obj).State = EntityState.Modified;
-            if (obj is AuditEntity)
+            if (obj is IAuditEntity)
             {
                 var date = DateTime.Now;
                 var user = HttpContext.Current.User;
                 var userid = user.Identity.GetUserId();
-                (obj as AuditEntity).CreatedAt = date;
-                (obj as AuditEntity).CreatedBy = userid;
+                (obj as IAuditEntity).CreatedAt = date;
+                (obj as IAuditEntity).CreatedBy = userid;
 
             }
             Save();
@@ -70,13 +70,13 @@ namespace OctagonPlatform.Repositories
             if (existing is ISoftDeleted)
             {
                 ((ISoftDeleted)existing).Deleted = true;
-                if (existing is AuditEntity)
+                if (existing is IAuditEntity)
                 {
                     var date = DateTime.Now;
                     var user = HttpContext.Current.User;
                     var userid = user.Identity.GetUserId();
-                    (existing as AuditEntity).DeletedAt= date;
-                    (existing as AuditEntity).DeletedBy = userid;
+                    (existing as IAuditEntity).DeletedAt= date;
+                    (existing as IAuditEntity).DeletedBy = userid;
 
                 }
 

@@ -13,6 +13,12 @@ namespace OctagonPlatform
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
 
+            //Allow me to include ajax in my views
+            bundles.Add(new ScriptBundle("~/bundles/ajax").Include(
+                "~/Scripts/jquery.unobtrusive-ajax.min"));
+
+
+
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(

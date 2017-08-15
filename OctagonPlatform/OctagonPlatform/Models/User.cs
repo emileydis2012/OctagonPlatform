@@ -11,10 +11,12 @@ namespace OctagonPlatform.Models
 
         [Required]
         [StringLength(8)]
+        [Display(Name = "")]
         public string  UserName { get; set; }
 
         [Required]
         [StringLength(8)]
+        [Display (Name = "")]
         public string Password { get; set; }    
 
         public bool? Deleted { get; set; }

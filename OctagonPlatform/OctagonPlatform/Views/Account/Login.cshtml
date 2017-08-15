@@ -22,7 +22,7 @@
                 </div>
                 @Html.LabelFor(model => model.UserName, new { @class = "col-md-2 control-label" })
                 <div class="col-md-10">
-                    @Html.TextBoxFor(model => model.UserName, new {@class="form-control"})
+                    @Html.TextBoxFor(model => model.UserName, new {@class="form-control", placeholder="Name"})
                     @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -30,7 +30,7 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.Password, new {@class = "col-md-2 control-label"})
                 <div class="col-md-10">
-                    @Html.PasswordFor(model => model.Password, new {@class = "form-control"})
+                    @Html.PasswordFor(model => model.Password, new {@class = "form-control" , placeholder="Password"})
                     @Html.ValidationMessageFor(model => model.Password, "", new {@class = "text-danger"})
                 </div>
             </div>

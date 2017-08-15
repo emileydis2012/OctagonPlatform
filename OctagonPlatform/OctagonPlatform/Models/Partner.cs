@@ -12,10 +12,10 @@ namespace OctagonPlatform.Models
         
         public Partner()
         {
-            AspNetUsers = new HashSet<AspNetUser>();
+           // AspNetUsers = new HashSet<AspNetUser>();
             logoes = new HashSet<Logo>();
             partnersContacts = new HashSet<PartnersContact>();           
-            terminals = new HashSet<Terminal>();
+           // terminals = new HashSet<Terminal>();
         }
 
         public int Id { get; set; }
@@ -67,16 +67,16 @@ namespace OctagonPlatform.Models
         [StringLength(450)]
         public string updated_by { get; set; }
 
-        public virtual ICollection<AspNetUser> AspNetUsers { get; set; }
+     //   public virtual ICollection<AspNetUser> AspNetUsers { get; set; }
 
-        public virtual ICollection<logo> logoes { get; set; }
+        public virtual ICollection<Logo> logoes { get; set; }
 
-       public virtual ICollection<partnersContact> partnersContacts { get; set; }     
+       public virtual ICollection<PartnersContact> partnersContacts { get; set; }     
 
         public virtual Partner parent { get; set; }
 
-        public virtual Region region { get; set; }
+       // public virtual Region region { get; set; }
 
-        public virtual ICollection<terminal> terminals { get; set; }
+       // public virtual ICollection<terminal> terminals { get; set; }
     }
 }

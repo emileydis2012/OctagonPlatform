@@ -27,7 +27,7 @@ namespace OctagonPlatform.Controllers
         public ActionResult Login(User user)
         {
             //Implementation Here
-            return View();
+            return RedirectToAction("Index", "Dashboard");
         }
 
         // GET: Account
